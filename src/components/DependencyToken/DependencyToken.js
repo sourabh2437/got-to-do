@@ -17,6 +17,11 @@ DependencyToken.propTypes = {
     text: PropTypes.string
 }
 
+DependencyToken.defaultProps = {
+    onClick: () => { },
+    isEditable: false,
+    text: ''
+}
 
-export default DependencyToken
+export default DependencyToken;
 
