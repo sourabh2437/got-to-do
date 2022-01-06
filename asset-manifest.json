@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/got-to-do/static/css/main.93c2a033.css",
+    "main.js": "/got-to-do/static/js/main.1b6ff9df.js",
+    "static/media/sad.png": "/got-to-do/static/media/sad.8843e82861b888fdf750.png",
+    "static/media/happy.png": "/got-to-do/static/media/happy.712f789450b93fa9ac8b.png",
+    "static/media/check-mark.png": "/got-to-do/static/media/check-mark.a5259c875782a455aa99.png",
+    "static/media/smiling.png": "/got-to-do/static/media/smiling.255755f1866b27f851cc.png",
+    "static/media/clock-time.png": "/got-to-do/static/media/clock-time.7cbb8dde94dc3af6d4fa.png",
+    "static/media/time.png": "/got-to-do/static/media/time.9dfc73513929ce3a0f59.png",
+    "index.html": "/got-to-do/index.html",
+    "main.93c2a033.css.map": "/got-to-do/static/css/main.93c2a033.css.map",
+    "main.1b6ff9df.js.map": "/got-to-do/static/js/main.1b6ff9df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93c2a033.css",
+    "static/js/main.1b6ff9df.js"
+  ]
+}
