@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/got-to-do/static/css/main.1efcc505.css",
-    "main.js": "/got-to-do/static/js/main.df651c89.js",
+    "main.css": "/got-to-do/static/css/main.2f6d880f.css",
+    "main.js": "/got-to-do/static/js/main.c82cf1b0.js",
     "static/media/sad.png": "/got-to-do/static/media/sad.8843e82861b888fdf750.png",
     "static/media/happy.png": "/got-to-do/static/media/happy.712f789450b93fa9ac8b.png",
     "static/media/check-mark.png": "/got-to-do/static/media/check-mark.a5259c875782a455aa99.png",
@@ -9,11 +9,11 @@
     "static/media/clock-time.png": "/got-to-do/static/media/clock-time.7cbb8dde94dc3af6d4fa.png",
     "static/media/time.png": "/got-to-do/static/media/time.9dfc73513929ce3a0f59.png",
     "index.html": "/got-to-do/index.html",
-    "main.1efcc505.css.map": "/got-to-do/static/css/main.1efcc505.css.map",
-    "main.df651c89.js.map": "/got-to-do/static/js/main.df651c89.js.map"
+    "main.2f6d880f.css.map": "/got-to-do/static/css/main.2f6d880f.css.map",
+    "main.c82cf1b0.js.map": "/got-to-do/static/js/main.c82cf1b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.1efcc505.css",
-    "static/js/main.df651c89.js"
+    "static/css/main.2f6d880f.css",
+    "static/js/main.c82cf1b0.js"
   ]
 }
