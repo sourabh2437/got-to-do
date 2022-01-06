@@ -1,0 +1,138 @@
+@keyframes slideup {
+    0% {
+     transform: translateY(100%);
+    }
+    
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slidedown {
+    0% {
+     transform: translateY(-100%);
+    }
+    
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.TodoItem{
+    border: 1px solid #f1f1f1;
+    padding: 0.5em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 1em;
+    background-color: #f2f2f2;
+    margin: 0.5em 1em;
+    box-shadow: 1px 3px 6px rgba(0,0,0,0.16);
+
+    animation-name: slideup;
+    animation-duration: 0.5s;
+    -webkit-animation-name: slideup;
+    -webkit-transition-duration: 0.5s;
+
+
+    &.Completed{
+        filter: grayscale(1);
+        color: #f2f2f2;
+        box-shadow: none;
+        animation-name: slidedown;
+        animation-duration: 0.2s;
+        -webkit-animation-name: slidedown;
+        -webkit-transition-duration: 0.2s;
+    }
+
+    &__Checkbox{
+        cursor: pointer;
+       
+        &__Img{
+            width: 20px;
+            height: 20px;
+        }
+        &__Uncheck{
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+        }
+    }
+    &__Infobox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 1.5em;
+        width: 100%;
+
+        &__Top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            &__Title{
+                color: #333333;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 1.1em;
+                font-weight: 500;
+               
+                &.Completed{
+                    color: #888888;
+                }
+            }
+            &__Row{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-wrap: wrap;
+
+                &__Item{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 0.8em;
+                    color: #333333;
+                    margin: 0.2em 0.5em; 
+
+                    span {
+                        &.Completed{
+                            color: #888888;
+                        }
+                    }
+
+                    &__Img{
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 0.2em;
+                    }
+                }
+            }
+        }
+        &__Bottom{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 0.5em;
+
+            &__Dependencies{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            &__Emotion{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

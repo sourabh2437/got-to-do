@@ -1,0 +1,79 @@
+.Todo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    //padding: 1em;
+    background-color: #f8f8f8;
+    position: relative;
+
+
+    &__Navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #5f7d95;
+        padding: 1em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60px;
+
+        &__Title{
+            font-size: 1.5em;
+            font-weight: 600;
+            color: white;
+        }
+
+        button{
+            background: linear-gradient(180deg, #ff7458, #ff5e48);
+            color: white;
+            padding: 1em;
+            border-radius: 1em;
+            border: 1px solid #5f7d95;
+            cursor: pointer;
+            transition: all ease-in-out 0.2s;
+            &:hover {
+                background: linear-gradient(180deg, #ff7458, #ff5e48);
+            }
+        }
+    }
+
+    &__Content{
+        overflow: auto;
+        overflow-y: scroll;
+        margin-top: 60px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__Title {
+        padding: 0.5em;
+        font-size: 1.2em;
+        font-weight: 500;
+        color: #222222;
+    }
+
+    &__InfoText{
+        margin: 2em 0;
+        font-size: 1em;
+        color: #444444;
+    }
+
+   
+
+    &__Container{
+        background-color: white;
+        padding: 1em;
+        border-radius: 1em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+       
+    }
+}

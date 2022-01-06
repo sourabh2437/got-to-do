@@ -1,0 +1,85 @@
+.TodoForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1em;
+
+    &__Row{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        &.Center{
+            justify-content: center;
+        }
+        &__Item{
+            margin: 0.5em 1em;
+            width: 100%;
+            &__Label{
+                color: #333333;
+                font-size: 1.1em;
+                font-weight: 500;
+                margin-bottom: 0.5em;
+            }
+            &__Input{
+                color: #333333;
+                width: 80%;
+            }
+            &__Wrapper{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            &__AddButton{
+                background-color:#0195b6;
+                color: white;
+                border-radius: 1em;
+                padding: 0.65em 1em;
+                margin: 0 0.5em
+            }
+            &__SubmitButton{
+                background: linear-gradient(180deg, #ff7458, #ff5e48);
+                padding: 0.65em 1em;
+                color: white;
+                border-radius: 1em;
+                margin: 2em 0;
+                font-size: 1.2em;
+            }
+            &__DependencyWrapper{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 0.5em 0;
+            }
+            &__ExcitementLevel{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &__Item{
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 1em;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    transition: all ease-in-out 0.2s;
+                    &:hover{
+                        transform:scale(1.1);
+                        cursor:pointer;
+                    }
+                    &.Selected {
+                        border-radius: 50%;
+                        border: 2px solid #0094b5;
+                        transform:scale(1.2);
+                    }
+                }
+            }
+        }
+       
+    }
+    
+}
