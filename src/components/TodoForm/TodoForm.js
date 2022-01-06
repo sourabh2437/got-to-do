@@ -1,18 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './TodoForm.scss'
+import DependencyToken from '../DependencyToken'
+//utils
 import get from 'lodash/get'
+import uniqueId from 'lodash/uniqueId'
+import { getTodaysDate } from '../../utils'
+//assets
 import HappyIcon from '../../assets/icons/happy.png'
 import SadIcon from '../../assets/icons/sad.png'
 import SmileIcon from '../../assets/icons/smiling.png'
-import DependencyToken from '../DependencyToken'
-import uniqueId from 'lodash/uniqueId'
-import { getTodaysDate } from '../../utils'
 
 function TodoForm({ addTodoItem }) {
     const [data, setData] = useState({ id: uniqueId("Todo-"), title: "", dueDate: "", duration: "", excitementLevel: "", dependencies: [] });
     const [dependencyString, setDependencyString] = useState('');
     const [dependencyArr, setDependencyArr] = useState([]);
+    const [enableCreateBtn, toggleCreateBtnState] = useState(false);
 
     const handleItemChange = (e, type) => {
         const val = e.target.value
@@ -54,6 +57,16 @@ function TodoForm({ addTodoItem }) {
         setDependencyArr([...currDependencies])
         newData['dependencies'] = [...currDependencies];
     }
+
+    useEffect(() => {
+        const { title, dueDate, duration, excitementLevel } = data;
+        if (title && dueDate && duration && excitementLevel) {
+            toggleCreateBtnState(true)
+        } else {
+            toggleCreateBtnState(false)
+        }
+    }, [data])
+
     return (
         <div className="TodoForm">
             <div className="TodoForm__Row">
@@ -100,7 +113,7 @@ function TodoForm({ addTodoItem }) {
                 </div>
             </div>
             <div className="TodoForm__Row Center">
-                <button onClick={handleSubmit} className="TodoForm__Row__Item__SubmitButton">Create Task</button>
+                <button onClick={handleSubmit} disabled={!enableCreateBtn} className={`TodoForm__Row__Item__SubmitButton ${!enableCreateBtn && "Disabled"}`}>Create Task</button>
             </div>
         </div>
     )

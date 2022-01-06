@@ -46,6 +46,10 @@
                 border-radius: 1em;
                 margin: 2em 0;
                 font-size: 1.2em;
+                &.Disabled{
+                    background: linear-gradient(180deg, #aaa 5%, #ccc);
+                    cursor: default;
+                }
             }
             &__DependencyWrapper{
                 display: flex;
