@@ -3,7 +3,7 @@
         "id": "ToDo-1",
         "title": "Do Laundry",
         "excitementLevel": "LOW",
-        "dueDate": "2021-01-10",
+        "dueDate": "2022-01-10",
         "duration": 90,
         "dependencies": [
             "Detergent"
@@ -13,7 +13,7 @@
         "id": "ToDo-2",
         "title": "Send Postcards to Family",
         "excitementLevel": "MEDIUM",
-        "dueDate": "2021-01-09",
+        "dueDate": "2022-01-09",
         "duration": 20,
         "dependencies": [
             "Postcards",
@@ -24,7 +24,7 @@
         "id": "ToDo-3",
         "title": "Visit GrandParents for New Year",
         "excitementLevel": "HIGH",
-        "dueDate": "2021-01-17",
+        "dueDate": "2022-01-17",
         "duration": 180,
         "dependencies": []
     }
