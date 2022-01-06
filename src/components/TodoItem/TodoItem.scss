@@ -87,6 +87,12 @@
                 &.Completed{
                     color: #888888;
                 }
+                &.Mobile{
+                    max-width: 150px;
+                }
+                &.Desktop{
+                    max-width: 300px;
+                }
             }
             &__Row{
                 width: 100%;

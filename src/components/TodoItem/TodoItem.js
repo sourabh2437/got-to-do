@@ -8,6 +8,9 @@ import SmileIcon from '../../assets/icons/smiling.png'
 import TimeIcon from '../../assets/icons/time.png'
 import DurationIcon from '../../assets/icons/clock-time.png'
 import DependencyToken from '../DependencyToken';
+import { isTouchFriendly } from '../../utils';
+
+const device = isTouchFriendly ? 'Mobile' : 'Desktop'
 
 const getEmotion = (emotion) => {
     switch (emotion) {
@@ -26,7 +29,7 @@ function TodoItem({ id, title, isCompleted, onSelect, duration, excitementLevel,
             </div>
             <div className="TodoItem__Infobox">
                 <div className="TodoItem__Infobox__Top">
-                    <div className={`TodoItem__Infobox__Top__Title ${isCompleted && 'Completed'}`}>{title}</div>
+                    <div className={`TodoItem__Infobox__Top__Title ${isCompleted && 'Completed'} ${device}`}>{title}</div>
                     <div className="TodoItem__Infobox__Top__Row">
                         <div className="TodoItem__Infobox__Top__Row__Item">
                             <img src={TimeIcon} className="TodoItem__Infobox__Top__Row__Item__Img" /><span className={`${isCompleted && 'Completed'}`}>{dueDate}</span>

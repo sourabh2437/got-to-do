@@ -92,9 +92,9 @@ function TodoForm({ addTodoItem }) {
                     <div className='TodoForm__Row__Item__ExcitementLevel'>
                         <img src={SadIcon} onClick={() => handleExcitementLevel("LOW")}
                             className={`TodoForm__Row__Item__ExcitementLevel__Item ${get(data, 'excitementLevel') === 'LOW' && 'Selected'}`} />
-                        <img src={SmileIcon} onClick={() => handleExcitementLevel("MEDIUM")}
+                        <img src={HappyIcon} onClick={() => handleExcitementLevel("MEDIUM")}
                             className={`TodoForm__Row__Item__ExcitementLevel__Item ${get(data, 'excitementLevel') === 'MEDIUM' && 'Selected'}`} />
-                        <img src={HappyIcon} onClick={() => handleExcitementLevel("HIGH")}
+                        <img src={SmileIcon} onClick={() => handleExcitementLevel("HIGH")}
                             className={`TodoForm__Row__Item__ExcitementLevel__Item ${get(data, 'excitementLevel') === 'HIGH' && 'Selected'}`} />
                     </div>
                 </div>
