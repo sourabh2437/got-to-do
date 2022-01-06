@@ -81,7 +81,7 @@ function TodoForm({ addTodoItem }) {
                     </div>
                     <div className="TodoForm__Row__Item__DependencyWrapper">
                         {dependencyArr.map((item, index) => {
-                            return <DependencyToken text={item} isEditable={true} onClick={() => removeDependency(index)} />
+                            return <DependencyToken key={`Dep-${index}`} text={item} isEditable={true} onClick={() => removeDependency(index)} />
                         })}
                     </div>
                 </div>
@@ -107,7 +107,11 @@ function TodoForm({ addTodoItem }) {
 }
 
 TodoForm.propTypes = {
+    addTodoItem: PropTypes.func
+}
 
+TodoForm.defaultProps = {
+    addTodoItem: () => { }
 }
 
 export default TodoForm

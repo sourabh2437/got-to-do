@@ -5,8 +5,7 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommneded"
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -16,17 +15,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "prettier",
         "react"
     ],
-    "rules": {
-        "prettier/prettier": [
-            "error",
-            {
-                "trailingComma": "es5",
-                "printWidth": 150,
-                "singleQuote": true
-            }
-        ]
-    }
+    "rules": {}
 }

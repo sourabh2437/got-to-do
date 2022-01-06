@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './TodoItem.scss';
-import EditIcon from '../../assets/icons/pencil.png'
 import CheckMarkIcon from '../../assets/icons/check-mark.png'
 import HappyIcon from '../../assets/icons/happy.png'
 import SadIcon from '../../assets/icons/sad.png'
@@ -39,10 +38,9 @@ function TodoItem({ id, title, isCompleted, onSelect, duration, excitementLevel,
                 </div>
                 <div className="TodoItem__Infobox__Bottom">
                     <img src={getEmotion(excitementLevel)} className="TodoItem__Infobox__Bottom__Emotion" />
-
                     <div className="TodoItem__Infobox__Bottom__Dependencies">
-                        {dependencies && dependencies.map(item => {
-                            return <DependencyToken isEditable={false} text={item} />
+                        {dependencies && dependencies.map((item, index) => {
+                            return <DependencyToken key={`Dep-${index}`} isEditable={false} text={item} />
                         })}
                     </div>
                 </div>
@@ -54,7 +52,20 @@ function TodoItem({ id, title, isCompleted, onSelect, duration, excitementLevel,
 }
 
 TodoItem.propTypes = {
-    excitementLevel: PropTypes.oneOf(["LOW", "MEDIUM", "HIGH"])
+    excitementLevel: PropTypes.oneOf(["LOW", "MEDIUM", "HIGH"]),
+    id: PropTypes.string,
+    title: PropTypes.string,
+    isCompleted: PropTypes.bool,
+    onSelect: PropTypes.func,
+    duration: PropTypes.number,
+    dueDate: PropTypes.string,
+    dependencies: PropTypes.arrayOf(PropTypes.string)
+}
+TodoItem.defaultProps = {
+    excitementLevel: "",
+    isCompleted: false,
+    onSelect: () => { },
+    dependencies: []
 }
 
 export default TodoItem

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import TodoItem from './components/TodoItem'
 import './App.scss'
 import InitialTodoData from './mocks/initialTodos.json';
@@ -7,7 +6,7 @@ import TodoForm from "./components/TodoForm";
 import Modal from "./components/Modal/Modal";
 import { sortByDate } from "./utils";
 
-const App = (props) => {
+const App = () => {
   const [todoList, setTodoList] = useState([...InitialTodoData]);
   const [completedTodoList, setCompletedTodoList] = useState([]);
   const [sortedTodoList, setSortedTodoList] = useState([...todoList]);
