@@ -1,51 +1,31 @@
 [
     {
-        "id": 1,
+        "id": "ToDo-1",
         "title": "Do Laundry",
         "excitementLevel": "LOW",
         "dueDate": "2021-01-10",
-        "duration": 10,
+        "duration": 90,
         "dependencies": [
-            "Heas",
-            "asds",
-            "asdada"
+            "Detergent"
         ]
     },
     {
-        "id": 2,
-        "title": "Do Laundry",
+        "id": "ToDo-2",
+        "title": "Send Postcards to Family",
         "excitementLevel": "MEDIUM",
-        "dueDate": "2021-01-04",
+        "dueDate": "2021-01-09",
         "duration": 20,
         "dependencies": [
-            "Heas",
-            "asds",
-            "asdada"
+            "Postcards",
+            "Pen"
         ]
     },
     {
-        "id": 3,
-        "title": "Do Laundry",
-        "excitementLevel": "LOW",
-        "dueDate": "2021-01-05",
-        "duration": 90,
+        "id": "ToDo-3",
+        "title": "Visit GrandParents for New Year",
+        "excitementLevel": "HIGH",
+        "dueDate": "2021-01-17",
+        "duration": 180,
         "dependencies": []
-    },
-    {
-        "id": 4,
-        "title": "Do Laundry",
-        "excitementLevel": "HIGH",
-        "dueDate": "2021-01-05",
-        "duration": 40,
-        "dependencies": [
-            "Heas"
-        ]
-    },
-    {
-        "id": 5,
-        "title": "Do Laundry",
-        "excitementLevel": "HIGH",
-        "dueDate": "2021-01-01",
-        "duration": 90
     }
 ]
